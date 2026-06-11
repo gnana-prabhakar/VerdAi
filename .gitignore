@@ -1,0 +1,32 @@
+# React Frontend Ignores
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# Python Backend Ignores
+venv/
+.venv/
+backend/__pycache__/
+backend/*.pyc
+backend/.env
+backend/instance/
+backend/htmlcov/
+backend/.pytest_cache/
+
+# Large ML Weights / Temp Data
+dataset/
+weights/*.pt
+weights/*.onnx
+trainings/
+.idea/
+.vscode/
+*.log
+*.sqlite
+.DS_Store

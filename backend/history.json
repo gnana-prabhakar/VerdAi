@@ -1,0 +1,86 @@
+[
+  {
+    "disease": "Tomato___Early_blight",
+    "confidence": 91.45,
+    "risk": "High",
+    "severity": "Moderate",
+    "date": "2026-06-05 10:20:15"
+  },
+  {
+    "disease": "Potato___Late_blight",
+    "confidence": 95.20,
+    "risk": "High",
+    "severity": "Severe",
+    "date": "2026-06-06 14:15:33"
+  },
+  {
+    "disease": "Tomato___Healthy",
+    "confidence": 98.90,
+    "risk": "Low",
+    "severity": "Low",
+    "date": "2026-06-07 09:30:11"
+  },
+  {
+    "disease": "Pepper___Bacterial_spot",
+    "confidence": 87.65,
+    "risk": "High",
+    "severity": "Severe",
+    "date": "2026-06-08 11:45:22"
+  },
+  {
+    "disease": "Tomato___Spider_mites",
+    "confidence": 92.10,
+    "risk": "Medium",
+    "severity": "Moderate",
+    "date": "2026-06-09 16:10:45"
+  },
+  {
+    "disease": "Tomato___Healthy",
+    "confidence": 99.12,
+    "risk": "Low",
+    "severity": "Low",
+    "date": "2026-06-10 08:00:05"
+  },
+  {
+    "disease": "Potato___Early_blight",
+    "confidence": 89.30,
+    "risk": "Medium",
+    "severity": "Moderate",
+    "date": "2026-06-10 13:22:40"
+  },
+  {
+    "disease": "Tomato___Late_blight",
+    "confidence": 94.50,
+    "risk": "High",
+    "severity": "Severe",
+    "date": "2026-06-11 09:00:18"
+  },
+  {
+    "disease": "Pepper___Healthy",
+    "confidence": 97.80,
+    "risk": "Low",
+    "severity": "Low",
+    "date": "2026-06-11 11:15:29"
+  },
+  {
+    "disease": "Tomato___Septoria_leaf_spot",
+    "confidence": 86.40,
+    "risk": "High",
+    "severity": "Moderate",
+    "date": "2026-06-11 14:30:12"
+  },
+  {
+    "disease": "Potato___Healthy",
+    "confidence": 99.45,
+    "risk": "Low",
+    "severity": "Low",
+    "date": "2026-06-11 16:45:00"
+  },
+  {
+    "disease": "Tomato___Yellow_Leaf_Curl_Virus",
+    "confidence": 93.15,
+    "risk": "Medium",
+    "severity": "Severe",
+    "date": "2026-06-11 18:20:55"
+  }
+]
