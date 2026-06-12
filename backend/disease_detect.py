@@ -9,21 +9,30 @@ else:
     model = YOLO("yolov8n.pt")
 
 def predict_disease(image_path):
-
     result = model.predict(
         source=image_path,
         imgsz=224,
         verbose=False
     )
 
-    probs = result[0].probs
+    # 1. Check for Classification Model (uses result[0].probs)
+    if hasattr(result[0], 'probs') and result[0].probs is not None:
+        probs = result[0].probs
+        class_id = int(probs.top1)
+        confidence = float(probs.top1conf)
+        disease = model.names[class_id]
+        return disease, confidence
 
-    class_id = int(probs.top1)
+    # 2. Check for Detection Model (uses result[0].boxes)
+    if hasattr(result[0], 'boxes') and result[0].boxes is not None and len(result[0].boxes) > 0:
+        boxes = result[0].boxes
+        # Select the box with the highest confidence score
+        best_idx = int(boxes.conf.argmax())
+        class_id = int(boxes.cls[best_idx])
+        confidence = float(boxes.conf[best_idx])
+        disease = model.names[class_id]
+        return disease, confidence
 
-    confidence = float(
-        probs.top1conf
-    )
-
-    disease = model.names[class_id]
-
-    return disease, confidence
+    # 3. Fallback if no classes/boxes were detected
+    default_disease = model.names[0] if (hasattr(model, 'names') and model.names) else "Healthy"
+    return default_disease, 0.0
